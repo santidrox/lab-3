@@ -1,0 +1,104 @@
+
+TECNIHOGAR
+1. Cotizar orden
+2. Registrar orden
+3. Registrar cuadrilla
+4. Crear jornada
+5. Asignar orden
+6. Retirar orden
+7. Iniciar jornada
+8. Registrar resultado
+9. Consultar órdenes
+10. Consultar cuadrillas
+11. Reportes
+12. Consultar jornadas y resultados
+0. Salir
+Opción: Operación rechazada: Ingrese un número entero válido.
+
+TECNIHOGAR
+1. Cotizar orden
+2. Registrar orden
+3. Registrar cuadrilla
+4. Crear jornada
+5. Asignar orden
+6. Retirar orden
+7. Iniciar jornada
+8. Registrar resultado
+9. Consultar órdenes
+10. Consultar cuadrillas
+11. Reportes
+12. Consultar jornadas y resultados
+0. Salir
+Opción: ÓRDENES POR CATEGORÍA Y ESTADO
+Diagnóstico: PENDIENTE=2 ASIGNADA=0 EN_ATENCION=0 COMPLETADA=0 CANCELADA=0 
+  Ingreso registro: Q0.00 | visitas: Q0.00 | total: Q0.00
+Instalación: PENDIENTE=2 ASIGNADA=0 EN_ATENCION=0 COMPLETADA=0 CANCELADA=0 
+  Ingreso registro: Q0.00 | visitas: Q0.00 | total: Q0.00
+Instalación eléctrica certificada: PENDIENTE=2 ASIGNADA=0 EN_ATENCION=0 COMPLETADA=0 CANCELADA=0 
+  Ingreso registro: Q0.00 | visitas: Q0.00 | total: Q0.00
+Mantenimiento de aire acondicionado: PENDIENTE=2 ASIGNADA=0 EN_ATENCION=0 COMPLETADA=0 CANCELADA=0 
+  Ingreso registro: Q0.00 | visitas: Q0.00 | total: Q0.00
+REGISTRO: Q0.00 | VISITAS: Q0.00 | TOTAL: Q0.00
+JORNADAS SIN CERRAR
+Ninguna.
+
+
+TECNIHOGAR
+1. Cotizar orden
+2. Registrar orden
+3. Registrar cuadrilla
+4. Crear jornada
+5. Asignar orden
+6. Retirar orden
+7. Iniciar jornada
+8. Registrar resultado
+9. Consultar órdenes
+10. Consultar cuadrillas
+11. Reportes
+12. Consultar jornadas y resultados
+0. Salir
+Opción: Código: Capacidad en horas: Operación rechazada: Ingrese un número decimal válido usando punto.
+
+TECNIHOGAR
+1. Cotizar orden
+2. Registrar orden
+3. Registrar cuadrilla
+4. Crear jornada
+5. Asignar orden
+6. Retirar orden
+7. Iniciar jornada
+8. Registrar resultado
+9. Consultar órdenes
+10. Consultar cuadrillas
+11. Reportes
+12. Consultar jornadas y resultados
+0. Salir
+Opción: ÓRDENES POR CATEGORÍA Y ESTADO
+Diagnóstico: PENDIENTE=2 ASIGNADA=0 EN_ATENCION=0 COMPLETADA=0 CANCELADA=0 
+  Ingreso registro: Q0.00 | visitas: Q0.00 | total: Q0.00
+Instalación: PENDIENTE=2 ASIGNADA=0 EN_ATENCION=0 COMPLETADA=0 CANCELADA=0 
+  Ingreso registro: Q0.00 | visitas: Q0.00 | total: Q0.00
+Instalación eléctrica certificada: PENDIENTE=2 ASIGNADA=0 EN_ATENCION=0 COMPLETADA=0 CANCELADA=0 
+  Ingreso registro: Q0.00 | visitas: Q0.00 | total: Q0.00
+Mantenimiento de aire acondicionado: PENDIENTE=2 ASIGNADA=0 EN_ATENCION=0 COMPLETADA=0 CANCELADA=0 
+  Ingreso registro: Q0.00 | visitas: Q0.00 | total: Q0.00
+REGISTRO: Q0.00 | VISITAS: Q0.00 | TOTAL: Q0.00
+JORNADAS SIN CERRAR
+Ninguna.
+
+
+TECNIHOGAR
+1. Cotizar orden
+2. Registrar orden
+3. Registrar cuadrilla
+4. Crear jornada
+5. Asignar orden
+6. Retirar orden
+7. Iniciar jornada
+8. Registrar resultado
+9. Consultar órdenes
+10. Consultar cuadrillas
+11. Reportes
+12. Consultar jornadas y resultados
+0. Salir
+Opción: 

@@ -1,0 +1,134 @@
+1	Inicio; órdenes	8	8	PASA
+2	Inicio; cuadrillas	3	3	PASA
+3	Inicio; pendientes	true	true	PASA
+4	Inicio; ingresos	Q0.00	Q0.00	PASA
+5	D01; metropolitana, 1 h; costo	Q150.00	Q150.00	PASA
+6	D01; metropolitana, 1 h; plazo	1	1	PASA
+7	D02; periférica, 1.5 h; costo	Q225.00	Q225.00	PASA
+8	D02; periférica, 1.5 h; plazo	2	2	PASA
+9	I01; metro, 2.5 h, 5 puntos; costo	Q460.00	Q460.00	PASA
+10	I01; metro, 2.5 h, 5 puntos; plazo	3	3	PASA
+11	I02; periférica, 1.2 h, 1 punto; costo	Q355.00	Q355.00	PASA
+12	I02; periférica, 1.2 h, 1 punto; plazo	5	5	PASA
+13	E01; metro, 2.5 h, 5 puntos, Q2000; costo	Q680.00	Q680.00	PASA
+14	E01; metro, 2.5 h, 5 puntos, Q2000; plazo	5	5	PASA
+15	E02; periférica, 2 h, 2 puntos, Q1000; costo	Q525.00	Q525.00	PASA
+16	E02; periférica, 2 h, 2 puntos, Q1000; plazo	7	7	PASA
+17	A01; metro, 1.5 h, 9000 BTU; costo	Q345.00	Q345.00	PASA
+18	A01; metro, 1.5 h, 9000 BTU; plazo	2	2	PASA
+19	A02; metro, 2 h, 60000 BTU; costo	Q400.00	Q400.00	PASA
+20	A02; metro, 2 h, 60000 BTU; plazo	2	2	PASA
+21	Instalación; horas dominan, 2.1 h, 1 punto; costo	Q370.00	Q370.00	PASA
+22	Instalación; horas dominan, 2.1 h, 1 punto; plazo	3	3	PASA
+23	Instalación; hora exacta, 3 h, 4 puntos; costo	Q370.00	Q370.00	PASA
+24	Instalación; hora exacta, 3 h, 4 puntos; plazo	3	3	PASA
+25	Cotización; datos e ingresos intactos	true	true	PASA
+26	Registro N01; cobro único	Q150.00	Q150.00	PASA
+27	Registro duplicado N01	RECHAZADA	RECHAZADA	PASA
+28	Registro duplicado N01; datos e ingresos intactos	true	true	PASA
+29	Código vacío	RECHAZADA	RECHAZADA	PASA
+30	Código vacío; datos e ingresos intactos	true	true	PASA
+31	Diagnóstico de 1.6 h	RECHAZADA	RECHAZADA	PASA
+32	Diagnóstico de 1.6 h; datos e ingresos intactos	true	true	PASA
+33	Horas cero	RECHAZADA	RECHAZADA	PASA
+34	Horas cero; datos e ingresos intactos	true	true	PASA
+35	Horas negativas	RECHAZADA	RECHAZADA	PASA
+36	Horas negativas; datos e ingresos intactos	true	true	PASA
+37	Horas NaN	RECHAZADA	RECHAZADA	PASA
+38	Horas NaN; datos e ingresos intactos	true	true	PASA
+39	Horas infinitas	RECHAZADA	RECHAZADA	PASA
+40	Horas infinitas; datos e ingresos intactos	true	true	PASA
+41	Puntos cero	RECHAZADA	RECHAZADA	PASA
+42	Puntos cero; datos e ingresos intactos	true	true	PASA
+43	Materiales cero	RECHAZADA	RECHAZADA	PASA
+44	Materiales cero; datos e ingresos intactos	true	true	PASA
+45	BTU menor a 9000	RECHAZADA	RECHAZADA	PASA
+46	BTU menor a 9000; datos e ingresos intactos	true	true	PASA
+47	BTU mayor a 60000	RECHAZADA	RECHAZADA	PASA
+48	BTU mayor a 60000; datos e ingresos intactos	true	true	PASA
+49	Aire periférico	RECHAZADA	RECHAZADA	PASA
+50	Aire periférico; datos e ingresos intactos	true	true	PASA
+51	Cuadrilla repetida	RECHAZADA	RECHAZADA	PASA
+52	Cuadrilla repetida; datos e ingresos intactos	true	true	PASA
+53	Capacidad cero	RECHAZADA	RECHAZADA	PASA
+54	Capacidad cero; datos e ingresos intactos	true	true	PASA
+55	Segunda jornada abierta C02	RECHAZADA	RECHAZADA	PASA
+56	Segunda jornada abierta C02; datos e ingresos intactos	true	true	PASA
+57	Iniciar jornada vacía	RECHAZADA	RECHAZADA	PASA
+58	Iniciar jornada vacía; datos e ingresos intactos	true	true	PASA
+59	A01 en cuadrilla sin certificación	RECHAZADA	RECHAZADA	PASA
+60	A01 en cuadrilla sin certificación; datos e ingresos intactos	true	true	PASA
+61	Capacidad usa 2.5 h estimadas y no 4 facturables	3.5	3.5	PASA
+62	Misma orden en otra jornada	RECHAZADA	RECHAZADA	PASA
+63	Misma orden en otra jornada; datos e ingresos intactos	true	true	PASA
+64	Exceder capacidad 6 h; suma 6.5	RECHAZADA	RECHAZADA	PASA
+65	Exceder capacidad 6 h; suma 6.5; datos e ingresos intactos	true	true	PASA
+66	Capacidad exacta permitida	0	0	PASA
+67	Retiro devuelve a pendiente	PENDIENTE	PENDIENTE	PASA
+68	Retiro no cobra	150.00	150.00	PASA
+69	Resultado antes de iniciar	RECHAZADA	RECHAZADA	PASA
+70	Resultado antes de iniciar; datos e ingresos intactos	true	true	PASA
+71	Retiro desde jornada incorrecta	RECHAZADA	RECHAZADA	PASA
+72	Retiro desde jornada incorrecta; datos e ingresos intactos	true	true	PASA
+73	Inicio primera visita; sin recargo	Q0.00	Q0.00	PASA
+74	Inicio pasa a atención	EN_ATENCION	EN_ATENCION	PASA
+75	Inicio repetido	RECHAZADA	RECHAZADA	PASA
+76	Inicio repetido; datos e ingresos intactos	true	true	PASA
+77	Retiro después de iniciar	RECHAZADA	RECHAZADA	PASA
+78	Retiro después de iniciar; datos e ingresos intactos	true	true	PASA
+79	Asignación después de iniciar	RECHAZADA	RECHAZADA	PASA
+80	Asignación después de iniciar; datos e ingresos intactos	true	true	PASA
+81	Resultado de orden ajena	RECHAZADA	RECHAZADA	PASA
+82	Resultado de orden ajena; datos e ingresos intactos	true	true	PASA
+83	Jornada espera todos los resultados	EN_CURSO	EN_CURSO	PASA
+84	Resultado repetido	RECHAZADA	RECHAZADA	PASA
+85	Resultado repetido; datos e ingresos intactos	true	true	PASA
+86	Último resultado cierra jornada	CERRADA	CERRADA	PASA
+87	Fallo con visitas disponibles	PENDIENTE	PENDIENTE	PASA
+88	Asignar orden completada	RECHAZADA	RECHAZADA	PASA
+89	Asignar orden completada; datos e ingresos intactos	true	true	PASA
+90	Reasignar todavía no cobra	Q0.00	Q0.00	PASA
+91	Segunda visita cobra al iniciar	Q40.00	Q40.00	PASA
+92	Certificada; dos fallos cancelan	CANCELADA	CANCELADA	PASA
+93	Reasignar cancelada	RECHAZADA	RECHAZADA	PASA
+94	Reasignar cancelada; datos e ingresos intactos	true	true	PASA
+95	D01; fallo 1; estado	PENDIENTE	PENDIENTE	PASA
+96	D01; visitas realizadas	1	1	PASA
+97	V1; cerrada	CERRADA	CERRADA	PASA
+98	D01; fallo 2; estado	PENDIENTE	PENDIENTE	PASA
+99	D01; visitas realizadas	2	2	PASA
+100	V2; cerrada	CERRADA	CERRADA	PASA
+101	D01; fallo 3; estado	CANCELADA	CANCELADA	PASA
+102	D01; visitas realizadas	3	3	PASA
+103	V3; cerrada	CERRADA	CERRADA	PASA
+104	I01; fallo 1; estado	PENDIENTE	PENDIENTE	PASA
+105	I01; visitas realizadas	1	1	PASA
+106	V4; cerrada	CERRADA	CERRADA	PASA
+107	I01; fallo 2; estado	PENDIENTE	PENDIENTE	PASA
+108	I01; visitas realizadas	2	2	PASA
+109	V5; cerrada	CERRADA	CERRADA	PASA
+110	I01; fallo 3; estado	CANCELADA	CANCELADA	PASA
+111	I01; visitas realizadas	3	3	PASA
+112	V6; cerrada	CERRADA	CERRADA	PASA
+113	E01; fallo 1; estado	PENDIENTE	PENDIENTE	PASA
+114	E01; visitas realizadas	1	1	PASA
+115	V7; cerrada	CERRADA	CERRADA	PASA
+116	E01; fallo 2; estado	CANCELADA	CANCELADA	PASA
+117	E01; visitas realizadas	2	2	PASA
+118	V8; cerrada	CERRADA	CERRADA	PASA
+119	A01; fallo 1; estado	CANCELADA	CANCELADA	PASA
+120	A01; visitas realizadas	1	1	PASA
+121	V9; cerrada	CERRADA	CERRADA	PASA
+122	Todas las categorías; recargos 2+2+1+0	Q200.00	Q200.00	PASA
+123	Datos iniciales no generan ingreso de registro	Q0.00	Q0.00	PASA
+124	Reporte; ingreso por diagnóstico	true	true	PASA
+125	Jornada repetida	RECHAZADA	RECHAZADA	PASA
+126	Jornada repetida; datos e ingresos intactos	true	true	PASA
+127	Cuadrilla inexistente	RECHAZADA	RECHAZADA	PASA
+128	Cuadrilla inexistente; datos e ingresos intactos	true	true	PASA
+129	Orden inexistente	RECHAZADA	RECHAZADA	PASA
+130	Orden inexistente; datos e ingresos intactos	true	true	PASA
+131	Jornada inexistente	RECHAZADA	RECHAZADA	PASA
+132	Jornada inexistente; datos e ingresos intactos	true	true	PASA
+133	Capacidad decimal; 0.1 + 0.2 = 0.3	0	0	PASA
+TOTAL	133 comprobaciones aprobadas

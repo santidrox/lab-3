@@ -1,0 +1,185 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide empty members
+class Cuadrilla {
+  - codigo: String {readOnly}
+  - capacidad: double {readOnly}
+  - refrigeracion: boolean {readOnly}
+  + Cuadrilla(codigo: String, capacidad: double, refrigeracion: boolean)
+  + getCodigo(): String
+  + getCapacidad(): double
+  + isRefrigeracion(): boolean
+  + toString(): String {override}
+}
+class Diagnostico {
+  + Diagnostico(codigo: String, cliente: String, direccion: String, horas: double, zona: Zona)
+  + calcularCosto(): BigDecimal {override}
+  + diasAtencion(): int {override}
+  + maxVisitas(): int {override}
+  + categoria(): String {override}
+}
+OrdenServicio <|-- Diagnostico
+enum EstadoJornada {
+  PREPARACION
+  EN_CURSO
+  CERRADA
+}
+enum EstadoOrden {
+  PENDIENTE
+  ASIGNADA
+  EN_ATENCION
+  COMPLETADA
+  CANCELADA
+}
+class Instalacion {
+  - puntos: int {readOnly}
+  + Instalacion(codigo: String, cliente: String, direccion: String, horas: double, zona: Zona, puntos: int)
+  + getPuntos(): int
+  + horasFacturables(): double
+  + calcularCosto(): BigDecimal {override}
+  + diasAtencion(): int {override}
+  + maxVisitas(): int {override}
+  + categoria(): String {override}
+}
+OrdenServicio <|-- Instalacion
+class InstalacionElectricaCertificada {
+  - valorMateriales: BigDecimal {readOnly}
+  + InstalacionElectricaCertificada(codigo: String, cliente: String, direccion: String, horas: double, zona: Zona, puntos: int, materiales: BigDecimal)
+  + getValorMateriales(): BigDecimal
+  + calcularCosto(): BigDecimal {override}
+  + diasAtencion(): int {override}
+  + maxVisitas(): int {override}
+  + categoria(): String {override}
+}
+Instalacion <|-- InstalacionElectricaCertificada
+class Jornada {
+  - codigo: String {readOnly}
+  - cuadrilla: Cuadrilla {readOnly}
+  - ordenes: List<OrdenServicio> {readOnly}
+  - Boolean> resultados: Map<String, {readOnly}
+  - estado: EstadoJornada
+  + Jornada(codigo: String, cuadrilla: Cuadrilla)
+  + getCodigo(): String
+  + getCuadrilla(): Cuadrilla
+  + getEstado(): EstadoJornada
+  + getOrdenes(): List<OrdenServicio>
+  + getResultados(): Map<String, Boolean>
+  + horasAsignadas(): BigDecimal
+  + capacidadDisponible(): BigDecimal
+  ~ asignar(orden: OrdenServicio): void
+  ~ retirar(orden: OrdenServicio): void
+  ~ iniciar(): Map<String, BigDecimal>
+  ~ registrarResultado(orden: OrdenServicio, completada: boolean): void
+  + toString(): String {override}
+}
+class Main {
+  - entrada: Scanner {readOnly}
+  - sistema: Sistema {readOnly}
+  + Main()
+  + main(args: String[]): void {static}
+  + ejecutar(): void
+  - texto(mensaje: String): String
+  - entero(mensaje: String): int
+  - decimal(mensaje: String): double
+  - dinero(mensaje: String): BigDecimal
+  - siNo(mensaje: String): boolean
+  - leerOrden(): OrdenServicio
+}
+class MantenimientoAire {
+  - btu: int {readOnly}
+  + MantenimientoAire(codigo: String, cliente: String, direccion: String, horas: double, zona: Zona, btu: int)
+  + getBtu(): int
+  + calcularCosto(): BigDecimal {override}
+  + diasAtencion(): int {override}
+  + maxVisitas(): int {override}
+  + categoria(): String {override}
+  + compatible(cuadrilla: Cuadrilla): boolean {override}
+}
+OrdenServicio <|-- MantenimientoAire
+abstract class OrdenServicio {
+  - codigo, cliente, direccion: String {readOnly}
+  - horasEstimadas: double {readOnly}
+  - zona: Zona {readOnly}
+  - estado: EstadoOrden
+  - visitas: int
+  + OrdenServicio(codigo: String, cliente: String, direccion: String, horas: double, zona: Zona)
+  + calcularCosto(): BigDecimal {abstract}
+  + diasAtencion(): int {abstract}
+  + maxVisitas(): int {abstract}
+  + categoria(): String {abstract}
+  + compatible(cuadrilla: Cuadrilla): boolean
+  # tarifaBase(): BigDecimal
+  + getCodigo(): String
+  + getCliente(): String
+  + getDireccion(): String
+  + getHorasEstimadas(): double
+  + getZona(): Zona
+  + getEstado(): EstadoOrden
+  + getVisitas(): int
+  ~ asignar(): void
+  ~ retirar(): void
+  ~ iniciarVisita(): BigDecimal
+  ~ finalizarVisita(completada: boolean): void
+  + toString(): String {override}
+}
+class Sistema {
+  - OrdenServicio> ordenes: Map<String, {readOnly}
+  - Cuadrilla> cuadrillas: Map<String, {readOnly}
+  - Jornada> jornadas: Map<String, {readOnly}
+  - BigDecimal> ingresosRegistro: Map<String, {readOnly}
+  - BigDecimal> ingresosVisitas: Map<String, {readOnly}
+  + Sistema()
+  + formato(monto: BigDecimal): String {static}
+  + cotizar(orden: OrdenServicio): String
+  + registrarOrden(orden: OrdenServicio): void
+  - agregarOrden(orden: OrdenServicio, cobrar: boolean): void
+  + registrarCuadrilla(cuadrilla: Cuadrilla): void
+  + crearJornada(codigo: String, codigoCuadrilla: String): void
+  + asignar(jornada: String, orden: String): void
+  + retirar(jornada: String, orden: String): void
+  + iniciar(codigo: String): void
+  + registrarResultado(jornada: String, orden: String, completada: boolean): void
+  + orden(codigo: String): OrdenServicio
+  + cuadrilla(codigo: String): Cuadrilla
+  + jornada(codigo: String): Jornada
+  - buscar(mapa: Map<String, T>, codigo: String, tipo: String): T {T genérico}
+  + getOrdenes(): Map<String, OrdenServicio>
+  + getCuadrillas(): Map<String, Cuadrilla>
+  + getJornadas(): Map<String, Jornada>
+  + totalRegistro(): BigDecimal
+  + totalVisitas(): BigDecimal
+  + totalIngresos(): BigDecimal
+  - sumar(mapa: Map<String, BigDecimal>): BigDecimal
+  + reporte(): String
+  + cargarDatosIniciales(): void
+}
+class Validacion {
+  - Validacion()
+  + texto(valor: String, campo: String): String {static}
+  + positivo(valor: double, campo: String): double {static}
+  + dinero(valor: BigDecimal, campo: String): BigDecimal {static}
+  + exigir(condicion: boolean, mensaje: String): void {static}
+}
+enum Zona {
+  METROPOLITANA
+  PERIFERICA
+}
+Sistema "1" o-- "0..*" OrdenServicio : registra
+Sistema "1" o-- "0..*" Cuadrilla : registra
+Sistema "1" o-- "0..*" Jornada : conserva
+Jornada "0..*" --> "1" Cuadrilla : utiliza
+Jornada "0..*" -- "0..*" OrdenServicio : visitas históricas
+Main "1" *-- "1" Sistema
+OrdenServicio --> Zona
+OrdenServicio --> EstadoOrden
+Jornada --> EstadoJornada
+note right of Jornada
+asignar consulta orden.compatible(cuadrilla).
+Solo iniciar consume visitas.
+end note
+note left of Sistema
+Registra costo completo al aceptar orden.
+Registra Q40 al iniciar visita adicional.
+Cuadrilla: máximo una jornada sin cerrar.
+end note
+@enduml

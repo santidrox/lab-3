@@ -1,0 +1,1 @@
+public enum Zona { METROPOLITANA, PERIFERICA }
